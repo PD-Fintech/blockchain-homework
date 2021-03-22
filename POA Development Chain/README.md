@@ -93,4 +93,4 @@ Be sure to include any preliminary setup information, such as installing depende
 * Screenshot the transaction metadata (status, tx hash, block number, etc) and save it to your Screenshots folder.
 ![success](Images/finalSuccess.PNG)
 
-**_Celebrate the success of sending transaction and creating blockchain!
+**Celebrate the success of sending transaction and creating blockchain!
