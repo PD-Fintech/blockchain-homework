@@ -27,13 +27,13 @@ Be sure to include any preliminary setup information, such as installing depende
 
 * A new project directory for my new network is bullion_config.
 
-* ![image](Images/dir_structure.png)
+![image](Images/dir_structure.png)
 
 * Create accounts for two (or more) nodes for the network with a separate `datadir` for each using `geth` using following command..
     ./geth --datadir node3 account new
     ./geth --datadir node4 account new
 
-* ![node](Images/node.png)
+![node](Images/node.png)
 
 * Run `puppeth`, name my network as bullion_config, and select the appropirate option to configure a new genesis block.
 
@@ -52,15 +52,15 @@ Be sure to include any preliminary setup information, such as installing depende
 
 * I deleted the `bullion_config-harmony.json` file.
 
-* ![image1](Images/puppeth1.png)
+![image1](Images/puppeth1.png)
 
-* ![image2](Images/puppeth2.png)
+![image2](Images/puppeth2.png)
 
 * Initialize each node with the new `bullion_config.json` with `geth` using following command.
     ./geth --datadir node1 init bullion_config/bullion_config.json
     ./geth --datadir node2 init bullion_config/bullion_config.json
 
-* ![nodeinit](Images/nodeinit.png)
+![nodeinit](Images/nodeinit.png)
 
 * Run the first node using following command, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
     ./geth --datadir node3 --unlock "0d4B4fB5AA46638d258095C8e418D4E670EdCb95" --mine --rpc --allow-insecure-unlock
