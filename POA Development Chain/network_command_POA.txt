@@ -1,0 +1,39 @@
+--------------------------------------------
+COMMANDS USED TO BUILD POA NODES
+--------------------------------------------
+./geth --datadir node3 account new
+wordpass
+PUBLIC KEY: 0x0d4B4fB5AA46638d258095C8e418D4E670EdCb95
+
+
+./geth --datadir node4 account new
+wordpass
+PUBLIC KEY:0xa8Db5eBCb8F43067fb1E598f38ee7F1F011874Ab
+
+
+--------------------------------------------
+./geth --datadir node3 init bullion_config/bullion_config.json
+./geth --datadir node4 init bullion_config/bullion_config.json
+--------------------------------------------
+RUN BELOW COMMAND-FIRST TIME
+--------------------------------------------
+./geth --datadir node3 --mine --miner.threads 1  # port 30303
+./geth --datadir node4 --port 30304 --rpc --bootnodes "enode://9965be004fb36f81dd1c5a5be71fcdfb6d930dc71707b460c8855bb72869c6bc3dfae9ddb4633db7b856cf18214841bf61a11cdeb1021ea0339a2fe249c7dd98@127.0.0.1:30303" --ipcdisable
+
+--------------------------------------------
+USE BELOW COMMAND TO REINITIALILZE NODE
+--------------------------------------------
+./geth --datadir node3 --unlock "0d4B4fB5AA46638d258095C8e418D4E670EdCb95" --mine --rpc --allow-insecure-unlock
+./geth --datadir node4 --unlock "a8Db5eBCb8F43067fb1E598f38ee7F1F011874Ab" --mine --port 30304 --bootnodes "enode://9965be004fb36f81dd1c5a5be71fcdfb6d930dc71707b460c8855bb72869c6bc3dfae9ddb4633db7b856cf18214841bf61a11cdeb1021ea0339a2fe249c7dd98@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+----------------------------------------
+http://127.0.0.1:8545
+----------------------------------------
+
+----------------------------------------
+Transaction History
+----------------------------------------
+
+TX Hash: 0x14e719ffaaac397daae89c8a9095ad8a039fd8a9a9a0b600cfea9cfd93c8490f
+TX Hash: 0x0ed91aa891b9930a3f555264984f12771561b2ed0f35b4bedeada980e3c7bd4c
+TX Hash: 0x053c785294d71c3112e32048e8c097a9607fd6566892cee7e3b460b75e914430
+
