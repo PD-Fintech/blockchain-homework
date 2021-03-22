@@ -86,13 +86,11 @@ Be sure to include any preliminary setup information, such as installing depende
 
 
 ### Another Sample Transaction
-* Import the keystore file from the `node3/keystore` directory into MyCrypto. This will import the private key.
-![keyfile](Images/Import_key.PNG)
 * Send a transaction from the `node3` account to the `node4` account.
-![ts](Images/finaltrans.png)
+![ts](Images/finaltrans.PNG)
 * Copy the transaction hash and paste it into the "TX Status" section of the app, or click "TX Status" in the popup.
 ![status](Images/finalstatus.PNG)
 * Screenshot the transaction metadata (status, tx hash, block number, etc) and save it to your Screenshots folder.
-![success](Images/finalsuccess.PNG)
+![success](Images/finalSuccess.PNG)
 
-* Celebrate the success of sending transaction and creating blockchain!
+**_Celebrate the success of sending transaction and creating blockchain!
