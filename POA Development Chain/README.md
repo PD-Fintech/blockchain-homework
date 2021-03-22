@@ -27,13 +27,13 @@ Be sure to include any preliminary setup information, such as installing depende
 
 * A new project directory for my new network is bullion_config.
 
-![image](Images/dir_structure.png)
+![image](Images/dir_structure.PNG)
 
 * Create accounts for two (or more) nodes for the network with a separate `datadir` for each using `geth` using following command..
     ./geth --datadir node3 account new
     ./geth --datadir node4 account new
 
-![node](Images/node.png)
+![node](Images/node.PNG)
 
 * Run `puppeth`, name my network as bullion_config, and select the appropirate option to configure a new genesis block.
 
@@ -52,15 +52,15 @@ Be sure to include any preliminary setup information, such as installing depende
 
 * I deleted the `bullion_config-harmony.json` file.
 
-![image1](Images/puppeth1.png)
+![image1](Images/puppeth1.PNG)
 
-![image2](Images/puppeth2.png)
+![image2](Images/puppeth2.PNG)
 
 * Initialize each node with the new `bullion_config.json` with `geth` using following command.
     ./geth --datadir node1 init bullion_config/bullion_config.json
     ./geth --datadir node2 init bullion_config/bullion_config.json
 
-![nodeinit](Images/nodeinit.png)
+![nodeinit](Images/nodeinit.PNG)
 
 * Run the first node using following command, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
     ./geth --datadir node3 --unlock "0d4B4fB5AA46638d258095C8e418D4E670EdCb95" --mine --rpc --allow-insecure-unlock
@@ -73,14 +73,26 @@ Be sure to include any preliminary setup information, such as installing depende
 
 * You will need to use a custom network, and include the chain ID, and use ETH as the currency.
 
-![custom-node](Images/customnode.png)
+![custom-node](Images/customnode.PNG)
 
 * Import the keystore file from the `node3/keystore` directory into MyCrypto. This will import the private key.
-![keyfile](Images/Import_key.png)
+![keyfile](Images/Import_key.PNG)
 * Send a transaction from the `node3` account to the `node4` account.
 ![ts](Images/Transaction.png)
 * Copy the transaction hash and paste it into the "TX Status" section of the app, or click "TX Status" in the popup.
-![status](Images/Status.png)
+![status](Images/Status.PNG)
 * Screenshot the transaction metadata (status, tx hash, block number, etc) and save it to your Screenshots folder.
-![success](Images/Success.png)
-* Celebrate, you just created a blockchain and sent a transaction!
+![success](Images/Success.PNG)
+
+
+### Another Sample Transaction
+* Import the keystore file from the `node3/keystore` directory into MyCrypto. This will import the private key.
+![keyfile](Images/Import_key.PNG)
+* Send a transaction from the `node3` account to the `node4` account.
+![ts](Images/finaltrans.png)
+* Copy the transaction hash and paste it into the "TX Status" section of the app, or click "TX Status" in the popup.
+![status](Images/finalstatus.PNG)
+* Screenshot the transaction metadata (status, tx hash, block number, etc) and save it to your Screenshots folder.
+![success](Images/finalsuccess.PNG)
+
+* Celebrate the success of sending transaction and creating blockchain!
